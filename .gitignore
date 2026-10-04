@@ -1,0 +1,8 @@
+private-evidence/
+exports/
+.env
+.env.*
+*.pem
+*.pfx
+*.key
+*.log

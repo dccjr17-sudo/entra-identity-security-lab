@@ -2,7 +2,7 @@
 
 A personal lab demonstrating scoped Conditional Access, contractor access reviews and offboarding, sign-in investigation, and a reusable read-only Microsoft Graph audit. Workforce personas are synthetic. This project documents observed outcomes and limitations; it does not claim production deployment experience.
 
-## Results as of October 4, 2026
+## Results as of October 6, 2026
 
 | Control | Observed outcome | Evidence limit |
 | --- | --- | --- |
@@ -14,18 +14,18 @@ A personal lab demonstrating scoped Conditional Access, contractor access review
 | Contractor governance | Alex and Jamie approved; Taylor denied, disabled, and removed from lab-users group | Separate review Applied status not inspected; session revocation user-reported |
 | Offboarding sign-in test | Taylor's subsequent logs showed 50057; Graph showed account disabled | Not a complete entitlement or token review |
 | Read-only audit | Consolidated script ran with all 12 reads successful | Snapshot of named resources, not full tenant compliance |
-| PIM | Reports Reader eligibility failed with RoleNotFound; Microsoft support case open | Eligibility and activation incomplete |
+| PIM | Time-bound Reports Reader eligibility established; activation observed; active list empty after scheduled end, eligibility retained | Earlier RoleNotFound cause unknown; privileged operation and fresh MFA not demonstrated |
 
 ## Scenario and identities
 
 | Identity | Purpose | Latest audit |
 | --- | --- | --- |
 | Alex.Employee | Workforce user | Enabled, P2 licensed |
-| Jamie.Admin | Privileged-access test persona | Enabled, P2; no active or eligible roles through inspected user/group paths |
+| Jamie.Admin | Privileged-access test persona | Enabled, P2; Reports Reader eligible through October 20; test activation ended |
 | Taylor.Contractor | Internal Member account simulating contract end, not a B2B guest | Disabled; removed from lab-users group; P2 retained |
 | Test User | Disabled test identity | Disabled, no license |
 
-Identity-Security-Lab-Users contains Alex and Jamie. Identity-Security-Lab-Privileged contains Jamie. Both groups have zero active role assignments and zero eligible role instances. A group name does not grant a role.
+Identity-Security-Lab-Users contains Alex and Jamie. Identity-Security-Lab-Privileged contains Jamie. The October 4 audit found both groups had zero active role assignments and zero eligible role instances. A group name does not grant a role.
 
 ## Explore the project
 
@@ -46,7 +46,7 @@ The script validates the connected tenant and makes GET requests only. Output de
 
 ## Remaining work and limits
 
-Resolve PIM with Microsoft support, then test eligibility and activation. The P2 trial expires October 27, 2026, with recurring billing off; ongoing licensing is not arranged. Taylor's license has not been reclaimed. Independent emergency credentials and recurring recovery drills remain outstanding. Security defaults disablement was instructed during transition but not separately confirmed.
+PIM eligibility, activation, and post-end portal state were verified October 6; the earlier failure cause remains unknown and support-case closure is unconfirmed. The P2 trial expires October 27, 2026, with recurring billing off; ongoing licensing is not arranged. Taylor's license has not been reclaimed. Independent emergency credentials and recurring recovery drills remain outstanding. Security defaults disablement was instructed during transition but not separately confirmed.
 
 Policies target configured lab users and administrator scope; this is not a baseline covering every future user. What If establishes matching, not enforcement. Disablement and group removal do not prove complete entitlement cleanup.
 

@@ -57,3 +57,10 @@ Reference evidence from the build log alongside actual observed results. Screens
 - [29-admin-ca03-live-success.png](29-admin-ca03-live-success.png): supplied 2026-10-03 after regular-admin fresh-session test instructions. Selected Azure Portal event Success and live Conditional Access CA03 Success; CA01/02/04 Not Applied. Personal identity obscured. Timestamp and Authentication Details omitted; no fresh-challenge claim. Other background events are not assessed by this selected event.
 
 - [30-contractor-review-created.png](30-contractor-review-created.png): October 4 creation of LAB-AR01 for Identity-Security-Lab-Users, status Not started. Does not prove saved scope/reviewer settings, completed review, or applied removals.
+
+## PIM validation — October 6, 2026
+
+- [31-pim-assignment-success.png](31-pim-assignment-success.png): success notification names Jamie.Admin and Reports Reader at 19:47:56 UTC. Private tenant name/ID and correlation ID are obscured in the supplied image. Does not alone distinguish eligible from active assignment.
+- [32-pim-reports-reader-activated.png](32-pim-reports-reader-activated.png): My roles Active assignments shows Reports Reader, Direct, Activated, ending at 1:52:39 PM Pacific. Jamie association follows the sign-in walkthrough; account selector is omitted. No fresh-MFA or privileged-operation claim.
+- [33-pim-active-empty-after-end.png](33-pim-active-empty-after-end.png): Active assignments shows No results, empty search field, desktop clock 1:53 PM on October 6. Supports absence from active list after scheduled end; does not show backend expiration event or token invalidation.
+- [34-pim-eligibility-retained.png](34-pim-eligibility-retained.png): Eligible assignments shows direct Reports Reader through October 20 at 12:47:26 PM, with Activate available. Account identity association follows the walkthrough. All four images copied unchanged from user-supplied evidence after visual privacy review.

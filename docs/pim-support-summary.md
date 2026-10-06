@@ -1,6 +1,14 @@
-# PIM Reports Reader eligibility failure
+# PIM Reports Reader investigation and successful follow-up
 
-Prepared October 4, 2026. User submitted a Microsoft support case on October 4 at 10:39 AM Pacific. Screenshot verifies Open status, severity C, included technical support, email contact, and advanced diagnostic permission granted. Case identifiers and personal contact details are omitted here. No support response is shown yet.
+## Current outcome — October 6, 2026
+
+Time-bound Reports Reader eligibility was successfully created through Users > Jamie.Admin > Assigned roles. The success notification is timestamped 19:47:56 UTC. Eligibility is direct and ends October 20 at 12:47:26 PM Pacific. The user then signed in as Jamie and activated the role; My roles displayed Activated with an end time of October 6 at 1:52:39 PM Pacific. At 1:53 PM, the active list was empty and eligibility remained with Activate available. See screenshot evidence 31–34.
+
+The earlier October 6 portal retry produced no visible notification and no assignment or audit event was found by the user. Microsoft support's October 5 email reported a mitigated weekend PIM issue but explicitly distinguished its symptoms from RoleNotFound. No underlying cause or link to that incident has been confirmed. Support-case closure is not established. A reply was drafted; sending is not independently confirmed. Fresh MFA, a privileged Reports Reader operation, and a backend expiration audit event were not inspected.
+
+## Historical failure record — October 4
+
+Prepared October 4, 2026. User submitted a Microsoft support case on October 4 at 10:39 AM Pacific. Screenshot verifies Open status, severity C, included technical support, email contact, and advanced diagnostic permission granted. Case identifiers and personal contact details are omitted here. The following describes observations at that time.
 
 ## Problem
 
